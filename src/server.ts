@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import { ApolloServer } from 'apollo-server-express';
 import typeDefs from './schema';
 import resolvers from './resolvers';
-import initialDatabase from './initialDatabase';
 
 mongoose.connect(process.env.DB_HOST as string, {
     user: process.env.DB_USER,
@@ -13,7 +12,6 @@ mongoose.connect(process.env.DB_HOST as string, {
     useCreateIndex: true
 }).then(() => {
     console.log("connected!");
-    initialDatabase();
 
     const app = express();
     app.use(cors());

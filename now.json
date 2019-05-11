@@ -5,7 +5,7 @@
         "use": "@now/node-server"
     }],
     "routes": [{
-        "src": "dist/.*",
-        "dest": "server.js"
+        "src": "/.*",
+        "dest": "dist/server.js"
     }]
 }
