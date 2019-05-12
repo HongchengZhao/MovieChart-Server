@@ -1,3 +1,4 @@
+.DS_STORE
 variables.env
 now.json
 /node_modules
